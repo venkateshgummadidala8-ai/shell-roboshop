@@ -33,5 +33,5 @@ VALIDATE $? "Adding Mongo repo" #$? will give the exit code of the last command 
 dnf install mongodb-org -y &>> $LOGS_FILE
 VALIDATE $? "Installing MongoDB"
 
-systemctl enable --now mongod 
-VALIDATE $? "Starting 7 ENABLING MongoDB"
+systemctl enable --now mongod  &>> $LOGS_FILE
+VALIDATE $? "Starting and Enabling MongoDB"
